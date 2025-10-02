@@ -102,7 +102,7 @@ class PaymentControllerIntegrationTest {
     @Test
     void testCreatePaymentIncorrectCardNumber() throws Exception {
         PaymentRequest request = new PaymentRequest(
-                "4111111111111112", // cardNumber is empty
+                "4111111111111112",
                 "12/25",
                 "123",
                 100.0,
@@ -126,7 +126,7 @@ class PaymentControllerIntegrationTest {
     @Test
     void testCreatePaymentIncorrectExpiryDate() throws Exception {
         PaymentRequest request = new PaymentRequest(
-                "4242424242424242", // cardNumber is empty
+                "4242424242424242",
                 "12/251",
                 "123",
                 100.0,
@@ -150,7 +150,7 @@ class PaymentControllerIntegrationTest {
     @Test
     void testCreatePaymentIncorrectCVV() throws Exception {
         PaymentRequest request = new PaymentRequest(
-                "4242424242424242", // cardNumber is empty
+                "4242424242424242",
                 "12/25",
                 "",
                 100.0,
@@ -174,7 +174,7 @@ class PaymentControllerIntegrationTest {
     @Test
     void testCreatePaymentIncorrectAmount() throws Exception {
         PaymentRequest request = new PaymentRequest(
-                "4242424242424242", // cardNumber is empty
+                "4242424242424242",
                 "12/25",
                 "123",
                 -100.0,
@@ -198,7 +198,7 @@ class PaymentControllerIntegrationTest {
     @Test
     void testCreatePaymentIncorrectCurrency() throws Exception {
         PaymentRequest request = new PaymentRequest(
-                "4242424242424242", // cardNumber is empty
+                "4242424242424242",
                 "12/25",
                 "123",
                 100.0,
@@ -222,7 +222,7 @@ class PaymentControllerIntegrationTest {
     @Test
     void testCreatePaymentIncorrectMerchantId() throws Exception {
         PaymentRequest request = new PaymentRequest(
-                "4242424242424242", // cardNumber is empty
+                "4242424242424242",
                 "12/25",
                 "123",
                 100.0,
