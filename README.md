@@ -81,6 +81,7 @@ The following scenarios are tested:
 - ❌ **Denied transaction (Denied)**  
 - ⚠️ **Missing card number**  
 - ⚠️ **Invalid card number (Luhn check failed)**  
+- ⚠️ **Invalid card number (Contains letters)**
 - ⚠️ **Invalid ExpiryDate**  
 - ⚠️ **Invalid CVV**  
 - ⚠️ **Invalid Amount**  
