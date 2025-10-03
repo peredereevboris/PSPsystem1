@@ -124,6 +124,30 @@ class PaymentControllerIntegrationTest {
     }
 
     /**
+     * Credit card number has not passed Luhn's algorithm.
+     * @throws Exception
+     */
+
+    @Test
+    void testCreatePaymentIncorrectCardNumberWithLetters() throws Exception {
+        PaymentRequest request = new PaymentRequest(
+                "41111111111111BB",
+                "12/25",
+                "123",
+                100.0,
+                "USD",
+                "M123"
+        );
+
+        mockMvc.perform(post("/payments")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(request)))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.errors[0].field").value("cardNumber"))
+                .andExpect(jsonPath("$.errors[0].message").value("Invalid card number"));
+    }
+
+    /**
      * Incorrect ExpiryDate
      * @throws Exception
      */

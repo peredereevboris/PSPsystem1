@@ -36,7 +36,7 @@ public class PaymentServiceImpl implements PaymentService {
 
         String transactionId = UUID.randomUUID().toString();
         Transaction tx = new Transaction(transactionId, request, "Pending");
-        // Set
+        // Store transaction with status "Pending"
         storage.put(transactionId, tx);
 
         log.info("For merchant: {}, created and stored transaction with id: {} and status: {}",
@@ -51,12 +51,11 @@ public class PaymentServiceImpl implements PaymentService {
         log.info("For transaction: {}, has been chosen acquirer : {}",
                 transactionId, acquirer);
 
-        // Acquirer service mock
+        // Acquirer service mock returns transaction status
         String status = acquirerService.process(request.getCardNumber(), acquirer);
 
 
         tx.setStatus(status);
-        storage.put(transactionId, tx);
 
         log.info("Transaction: {}, has status : {} and persisted in database",
                 transactionId, status);
