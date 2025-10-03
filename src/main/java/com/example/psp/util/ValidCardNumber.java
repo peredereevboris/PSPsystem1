@@ -5,6 +5,10 @@ import jakarta.validation.Payload;
 
 import java.lang.annotation.*;
 
+/**
+ * Validator for @ValidCardNumber annotation.
+ */
+
 @Documented
 @Constraint(validatedBy = LuhnValidator.class)
 @Target({ ElementType.FIELD })

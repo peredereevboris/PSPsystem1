@@ -11,7 +11,8 @@ import java.util.UUID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**
- * Payment Processing Endpoint
+ * Implementation of the payment service.
+ * Performs BIN-based routing, and acquirer processing.
  */
 
 @Service

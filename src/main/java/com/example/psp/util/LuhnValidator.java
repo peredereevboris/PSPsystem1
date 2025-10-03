@@ -4,7 +4,7 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
 /**
- * Card validation by Luhn method.
+ * Custom validator for card number validation (Luhn + length 13–19 digits).
  */
 public class LuhnValidator implements ConstraintValidator<ValidCardNumber, String> {
 

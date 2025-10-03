@@ -12,6 +12,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+/**
+ * Integration tests for REST API (PaymentController).
+ * Verify successful and error scenarios of payment processing.
+ */
+
 @SpringBootTest
 @AutoConfigureMockMvc
 class PaymentControllerIntegrationTest {

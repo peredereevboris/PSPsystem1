@@ -4,6 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * DTO for API response to a payment request.
+ * Returns transactionId, status, and message.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

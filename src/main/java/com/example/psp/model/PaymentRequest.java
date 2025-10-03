@@ -6,6 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.*;
 
+/**
+ * DTO for incoming payment request.
+ * Contains card data, amount, currency, and merchantId.
+ */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

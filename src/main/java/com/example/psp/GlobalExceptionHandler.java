@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Global exception handler for the application.
+ * Intercepts and processes validation and runtime exceptions across all controllers.
+ * Returns structured error responses (e.g., HTTP 400 with field-level validation messages).
+ */
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

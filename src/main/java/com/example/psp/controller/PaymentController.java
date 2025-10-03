@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * REST controller for managing payments.
+ * Provides API for creating and recording transactions.
+ */
+
 @RestController
 @RequestMapping("/payments")
 public class PaymentController {
