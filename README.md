@@ -86,7 +86,17 @@ The following scenarios are tested:
 - ⚠️ **Invalid CVV**  
 - ⚠️ **Invalid Amount**  
 - ⚠️ **Invalid Currency**  
-- ⚠️ **Invalid MerchantId**  
+- ⚠️ **Invalid MerchantId** 
+
+Unit tests (`LuhnValidatorTest`) are implemented for custom validation logic.  
+The following scenarios are covered:
+
+- ✅ **Valid Visa and MasterCard numbers pass Luhn check**
+- ⚠️ **Too short or too long numbers fail**
+- ⚠️ **Numbers containing non-digit characters fail**
+- ❌ **Numbers not passing Luhn checksum fail**
+- ⚠️ **Boundary cases**: minimum length (13 digits) and maximum length (19 digits) with valid cards
+- ⚠️ **Null input fails**
 
 ## 🔒 Security
 

@@ -13,7 +13,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
- * Integration tests for REST API (PaymentController).
+ * Integration tests for REST API {@link PaymentController}
  * Verify successful and error scenarios of payment processing.
  */
 
